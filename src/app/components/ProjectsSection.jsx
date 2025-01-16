@@ -7,12 +7,13 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
+    title: "Unboredom",
+    tech: "HTML, CSS, JavaScript",
+    description: "Mini jogos para jogar quando estiver entediado.",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/renancmd/unboredom",
+    previewUrl: "https://unboredom-7ctzd418e-renan-mendes-projects-8a8d1802.vercel.app/index.html", 
   },
   {
     id: 2,
@@ -116,6 +117,7 @@ const ProjectsSection = () => {
               description={project.description}
               imgUrl={project.image}
               gitUrl={project.gitUrl}
+              tech={project.tech}
               previewUrl={project.previewUrl}
             />
           </motion.li>
