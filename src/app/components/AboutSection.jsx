@@ -34,7 +34,7 @@ const TAB_DATA = [
       <ul className="list-disc pl-2">
         <li>
           <a
-            href="https://camblycertificates.s3.amazonaws.com/fb97f341/certificate.pdf?Signature=625uACgVjdiirErZ76FXvE1M60o%3D&Expires=1737031009&AWSAccessKeyId=AKIATTBVNDKPOZECJE3B"
+            href="https://www.cambly.com/en/certificate/verify/ac3c8d84?lang=en"
             target="_blank"
             rel="noopener noreferrer"
             className="underline"
