@@ -17,12 +17,13 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
+    title: "Verde Diff",
+    tech: "Python",
+    description: "Comparador de Saídas para o Verde - PUC Minas (Verde Diff)",
     image: "/images/projects/2.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All"],
+    gitUrl: "https://github.com/renancmd/verde-diff",
+    previewUrl: "https://github.com/renancmd/verde-diff",
   },
   {
     id: 3,
