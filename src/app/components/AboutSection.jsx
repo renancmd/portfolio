@@ -8,11 +8,11 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>C, Java</li>
-        <li>JavaScript, React, NextJS</li>
-        <li>Python, Django</li>
-        <li>Inglês</li>
-        <li>Engenharia de Software</li>
+          <li>NextJS, TypeScript</li>
+          <li>C, C++, Java (Spark, Maven, SpringBoot)</li>
+          <li>Python</li>
+          <li>PostgresSQL, MySQL</li>
+          <li>SCRUM</li>
       </ul>
     ),
   },
