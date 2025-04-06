@@ -7,33 +7,32 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "Unboredom",
-    tech: "HTML, CSS, JavaScript",
-    description: "Mini jogos para jogar quando estiver entediado.",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/renancmd/unboredom",
-    previewUrl: "https://unboredom-7ctzd418e-renan-mendes-projects-8a8d1802.vercel.app/index.html", 
+    title: "Full-stack Roadmap",
+    description: "Project 5 description",
+    image: "/images/projects/6.png",
+    tag: ["Destaques", "Web"],
+    gitUrl: "/",
+    previewUrl: "/",
   },
   {
     id: 2,
+    title: "My Organizer",
+    tech: "Java, Spring Boot, MySQL, NextJS, Typescript ",
+    description: "Aplicação web full stack. To-Do App com autenticação segura usando RestAPI, JWT e Bcrypt.",
+    image: "/images/projects/my-organizer.png",
+    tag: ["Destaques", "Web"],
+    gitUrl: "https://github.com/renancmd/my-organizer-server",
+    previewUrl: "https://github.com/renancmd/my-organizer-server",
+  },
+  {
+    id: 3,
     title: "Verde Diff",
     tech: "Python",
     description: "Comparador de Saídas para o Verde - PUC Minas (Verde Diff)",
     image: "/images/projects/2.png",
-    tag: ["All"],
+    tag: ["Destaques", "CLI"],
     gitUrl: "https://github.com/renancmd/verde-diff",
-    previewUrl: "https://github.com/renancmd/verde-diff",
-  },
-  {
-    id: 3,
-    title: "Procura Cine",
-    tech: "NextJS, TypeScript, Sass",
-    description: "Usa API para exibir informações de filmes para que usuários possam decidir o que assistir",
-    image: "/images/projects/3.jpeg",
-    tag: ["All", "Mobile"],
-    gitUrl: "https://github.com/renancmd/procura-cine",
-    previewUrl: "https://procura-cine.vercel.app/",
+    previewUrl: "https://github.com/renancmd/verde-diff/blob/main/README.md",
   },
   {
     id: 4,
@@ -41,32 +40,64 @@ const projectsData = [
     tech: "Java (Spark, Maven), PostgreeSQL, JavaScript",
     description: "Receitas fáceis para ingredientes que o usuário possui em casa. - Trabalho Interdisciplinar de Ciências da Computação",
     image: "/images/projects/4.jpeg",
-    tag: ["All", "Web"],
+    tag: ["Destaques", "Web"],
     gitUrl: "https://github.com/ICEI-PUC-Minas-CC-TI/plmg-cc-ti2-2025-1-g19-fridgeeasy",
     previewUrl: "/",
   },
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "Procura Cine",
+    tech: "NextJS, TypeScript, Sass",
+    description: "Consome uma API para exibir informações de filmes para que usuários possam decidir o que assistir",
+    image: "/images/projects/3.jpeg",
+    tag: ["Destaques", "Web"],
+    gitUrl: "https://github.com/renancmd/procura-cine",
+    previewUrl: "https://procura-cine.vercel.app/",
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "Unboredom",
+    tech: "HTML, CSS, JavaScript",
+    description: "Mini jogos para jogar quando estiver entediado.",
+    image: "/images/projects/1.png",
+    tag: ["Destaques", "Web"],
+    gitUrl: "https://github.com/renancmd/unboredom",
+    previewUrl: "https://unboredom-7ctzd418e-renan-mendes-projects-8a8d1802.vercel.app/index.html", 
+  },
+  {
+    id: 7,
+    title: "Jogo da cobrinha",
+    tech: "Python, Turtle",
+    description: "Clássico jogo da cobrinha, projeto para estudar POO em python.",
+    image: "/images/projects/python-logo.png",
+    tag: ["CLI"],
+    gitUrl: "https://github.com/renancmd/snake-game",
+    previewUrl: "https://github.com/renancmd/snake-game", 
+  },
+  {
+    id: 8,
+    title: "Advinhe o estado (USA)",
+    tech: "Python, Turtle",
+    description: "Mini game para tentar advinhar os 50 estados dos Estados Unidos.",
+    image: "/images/projects/python-logo.png",
+    tag: ["CLI"],
+    gitUrl: "https://github.com/renancmd/us-state-game",
+    previewUrl: "https://github.com/renancmd/us-state-game", 
+  },
+  {
+    id: 9,
+    title: "Cross turle, cross!",
+    tech: "Python, Turtle",
+    description: "Game simples estilo Crossy road para treinar uso de bibliotecas python.",
+    image: "/images/projects/python-logo.png",
+    tag: ["CLI"],
+    gitUrl: "https://github.com/renancmd/turtle-crossing-game",
+    previewUrl: "https://github.com/renancmd/turtle-crossing-game", 
   },
 ];
 
 const ProjectsSection = () => {
-  const [tag, setTag] = useState("All");
+  const [tag, setTag] = useState("Destaques");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -91,8 +122,8 @@ const ProjectsSection = () => {
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
+          name="Destaques"
+          isSelected={tag === "Destaques"}
         />
         <ProjectTag
           onClick={handleTagChange}
@@ -101,8 +132,8 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="CLI"
+          isSelected={tag === "CLI"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">

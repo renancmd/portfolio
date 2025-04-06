@@ -12,6 +12,7 @@ const TAB_DATA = [
           <li>C, C++, Java (Spark, Maven, SpringBoot)</li>
           <li>Python</li>
           <li>PostgresSQL, MySQL</li>
+          <li>JWT, Bcrypt</li>
           <li>SCRUM</li>
       </ul>
     ),
