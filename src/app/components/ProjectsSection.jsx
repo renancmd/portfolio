@@ -7,22 +7,23 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["Destaques", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 2,
     title: "My Organizer",
-    tech: "Java, Spring Boot, MySQL, NextJS, Typescript ",
+    tech: "Java, Spring Boot, Docker, PgSQL, NextJS, Typescript ",
     description: "Aplicação web full stack. To-Do App com autenticação segura usando RestAPI, JWT e Bcrypt.",
     image: "/images/projects/my-organizer.png",
     tag: ["Destaques", "Web"],
     gitUrl: "https://github.com/renancmd/my-organizer-server",
-    previewUrl: "https://github.com/renancmd/my-organizer-server",
+    previewUrl: "https://my-organizer-client.vercel.app/sign-in",
+  },
+  {
+    id: 2,
+    title: "Minecraft MOD: Drops Off",
+    tech: "Java, Gradle, Minecraft Mod, Fabric API",
+    description: "Mod para Minecraft que desabilita a coleta de itens através de uma tecla de atalho.",
+    image: "/images/projects/drops-off.png",
+    tag: ["Destaques", "Web"],
+    gitUrl: "https://github.com/renancmd/drops-off-mod",
+    previewUrl: "https://github.com/renancmd/drops-off-mod",
   },
   {
     id: 3,
@@ -37,7 +38,7 @@ const projectsData = [
   {
     id: 4,
     title: "FridgeEasy - (EM DESENVOLVIMENTO)",
-    tech: "Java (Spark, Maven), PostgreeSQL, JavaScript",
+    tech: "Java (Spark, Maven), PostgreSQL, JavaScript",
     description: "Receitas fáceis para ingredientes que o usuário possui em casa. - Trabalho Interdisciplinar de Ciências da Computação",
     image: "/images/projects/4.jpeg",
     tag: ["Destaques", "Web"],

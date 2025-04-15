@@ -11,8 +11,8 @@ const TAB_DATA = [
           <li>NextJS, TypeScript</li>
           <li>C, C++, Java (Spark, Maven, SpringBoot)</li>
           <li>Python</li>
-          <li>PostgresSQL, MySQL</li>
-          <li>JWT, Bcrypt</li>
+          <li>PostgreSQL, MySQL</li>
+          <li>JWT, Bcrypt, Docker</li>
           <li>SCRUM</li>
       </ul>
     ),
