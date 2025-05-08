@@ -7,35 +7,40 @@ import Image from "next/image";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [submissionError, setSubmissionError] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setSubmissionError(null);
+
     const data = {
       email: e.target.email.value,
       subject: e.target.subject.value,
       message: e.target.message.value,
     };
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
 
-    // Form the request for sending data to the server.
-    const options = {
-      // The method is POST because we are sending data.
-      method: "POST",
-      // Tell the server we're sending JSON.
-      headers: {
-        "Content-Type": "application/json",
-      },
-      // Body of the request is the JSON data we created above.
-      body: JSONdata,
-    };
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
-
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
+      if (response.ok) {
+        console.log("Email sent successfully!");
+        setEmailSubmitted(true);
+        // Optionally reset the form here
+        e.target.reset();
+      } else {
+        const errorData = await response.json();
+        console.error("Failed to send email:", errorData?.error || "Unknown error");
+        setSubmissionError("Ocorreu um erro ao enviar o email. Por favor, tente novamente.");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setSubmissionError("Ocorreu um erro ao enviar o email. Por favor, tente novamente.");
     }
   };
 
@@ -117,6 +122,9 @@ const EmailSection = () => {
             >
               Enviar
             </button>
+            {submissionError && (
+              <p className="text-red-500 text-sm mt-2">{submissionError}</p>
+            )}
           </form>
         )}
       </div>
